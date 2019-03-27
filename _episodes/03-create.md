@@ -134,7 +134,7 @@ nothing to commit (create/copy files and use "git add" to track)
 > > folder in the moons subdirectory by running the following command from inside the 'moons' directory:
 > >
 > > ~~~
-> > $ rm -rf moons/.git
+> > $ rm -rf .git
 > > ~~~
 > > {: .bash}
 > >
