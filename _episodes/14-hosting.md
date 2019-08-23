@@ -60,26 +60,6 @@ situations, there is much less setup and maintenance involved with using an
 online service.  Furthermore, such tools are often provided free of charge to
 open source projects, and are also available for private repositories for a fee.
 
-> ## University of Leicester hosting services
-> UoL IT Services are in the process of rolling out a recommended hosting solution
-> for researchers. In the first instance, we suggest using **GitHub**, with a **Researcher
-> discount** (free private repositories and Continuous Integration usage). This 
-> requires you associate your `@le.ac.uk` account with your GitHub account, then 
-> follow the instructions [here](https://help.github.com/articles/applying-for-an-academic-research-discount/)
-> . This takes a few hours to validate.
->
-> You can also request to become a member of the UoL GitHub Organisation, called 
-> `UniOfLeicester` - not to be confused with university-of-leicester. This allows 
-> IT Services to help ensure code is available if you leave the University, and 
-> to see how many users use GitHub and understand how best to help them.
->
-> If you have specific requirements that are not fulfilled by GitHub (e.g. you 
-> require your data to be guaranteed to be stored locally or within UK/EU, or
-> you have specific CI needs not fulfilled by Travis CI) then we suggest
-> requesting access to our **UoL-hosted GitLab service**. This is not yet available, 
-> but will hopefully be rolled out in the coming months.
-{: .callout}
-
 > ## Institutional Barriers
 >
 > Sharing is the ideal for science,
