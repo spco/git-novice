@@ -35,7 +35,7 @@ Name your repository "planets" and then click "Create Repository":
 
 <img src="../fig/bitbucket-create-repo-02.png" width="500">
 
-As soon as the repository is created, Btibucket displays a page with a URL and some
+As soon as the repository is created, Bitbucket displays a page with a URL and some
 information on how to configure your local repository:
 
 <img src="../fig/bitbucket-create-repo-03.png" width="700">
@@ -79,7 +79,7 @@ Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://github.com/vlad/planets.git
+$ git remote add origin https://vlad@bitbucket.org/vlad/planets.git
 ~~~
 {: .bash}
 
@@ -94,8 +94,8 @@ $ git remote -v
 {: .bash}
 
 ~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
+origin   https://vlad@bitbucket.org/vlad/planets.git (push)
+origin   https://vlad@bitbucket.org/vlad/planets.git (fetch)
 ~~~
 {: .output}
 
@@ -116,7 +116,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (9/9), 821 bytes, done.
 Total 9 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets
+To https://vlad@bitbucket.org/vlad/planets
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
@@ -188,7 +188,7 @@ $ git pull origin master
 {: .bash}
 
 ~~~
-From https://github.com/vlad/planets
+From https://vlad@bitbucket.org/vlad/planets
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
