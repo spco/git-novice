@@ -39,14 +39,6 @@ which means that any changes pushed to
 another Git host server
 in a later lesson will include this information.
 
-> ## UoL email addresses
->
-> Researchers with an @le.ac.uk email address can access certain benefits
-> unavailable with a non-academic address. I suggest you use your @le.ac.uk
-> address here, unless you are already a heavy GitHub/BitBucket user under 
-> a different email address.
-{: .callout}
-
 > ## Line Endings
 >
 > As with other keys, when you hit the 'return' key on your keyboard, 
@@ -79,8 +71,7 @@ in a later lesson will include this information.
 > [on this GitHub page](https://help.github.com/articles/dealing-with-line-endings/).
 {: .callout}
 
-For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
-If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one. You can change the email address later on by using the `git config` command again.
+For these lessons, we will be interacting with [Bitbucket](https://bitbucket.org/) and so the email address used should be the same as the one used when setting up your Bitbucket account.
 
 Dracula also has to set his favorite text editor, following this table:
 
@@ -152,5 +143,3 @@ same commands to choose another editor or update your email address.
 > ~~~
 > {: .bash}
 {: .callout}
-
-[git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
