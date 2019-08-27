@@ -51,7 +51,7 @@ This line added to Wolfman's copy
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+and then push the change to Bitbucket:
 
 ~~~
 $ git add mars.txt
@@ -83,7 +83,7 @@ To https://github.com/vlad/planets
 
 Now let's have the other partner
 make a different change to their copy
-*without* updating from GitHub:
+*without* updating from Bitbucket:
 
 ~~~
 $ nano mars.txt
@@ -113,7 +113,7 @@ $ git commit -m "Add a line in my copy"
 ~~~
 {: .output}
 
-but Git won't let us push it to GitHub:
+but Git won't let us push it to Bitbucket:
 
 ~~~
 $ git push origin master
@@ -135,7 +135,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 Git rejects the push because it detects that the remote repository has new updates that have not been
 incorporated into the local branch.
-What we have to do is pull the changes from GitHub,
+What we have to do is pull the changes from Bitbucket,
 [merge]({{ page.root }}/reference/#merge) them into the copy we're currently working in,
 and then push that.
 Let's start by pulling:
@@ -184,7 +184,7 @@ This line added to Wolfman's copy
 
 Our change is preceded by `<<<<<<< HEAD`.
 Git has then inserted `=======` as a separator between the conflicting changes
-and marked the end of the content downloaded from GitHub with `>>>>>>>`.
+and marked the end of the content downloaded from Bitbucket with `>>>>>>>`.
 (The string of letters and digits after that marker
 identifies the commit we've just downloaded.)
 
@@ -231,16 +231,16 @@ Changes to be committed:
 {: .output}
 
 ~~~
-$ git commit -m "Merge changes from GitHub"
+$ git commit -m "Merge changes from Bitbucket"
 ~~~
 {: .bash}
 
 ~~~
-[master 2abf2b1] Merge changes from GitHub
+[master 2abf2b1] Merge changes from Bitbucket
 ~~~
 {: .output}
 
-Now we can push our changes to GitHub:
+Now we can push our changes to Bitbucket:
 
 ~~~
 $ git push origin master
