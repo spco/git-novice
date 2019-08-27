@@ -39,7 +39,7 @@ Next, the Collaborator needs to download a copy of the Owner's repository to her
 her `git-novice` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/git-novice/vlad-planets
+$ git clone https://vlad@bitbucket.org/vlad/planets.git ~/git-novice/vlad-planets
 ~~~
 {: .bash}
 
@@ -87,7 +87,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To https://vlad@bitbucket.org/vlad/planets.git
    9272da5..29aba7c  master -> master
 ~~~
 {: .output}
@@ -112,7 +112,7 @@ remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0)
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://vlad@bitbucket.org/vlad/planets
  * branch            master     -> FETCH_HEAD
 Updating 9272da5..29aba7c
 Fast-forward
