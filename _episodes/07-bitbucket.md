@@ -29,16 +29,16 @@ Let's start by sharing the changes we've made to our current project with the
 world.  Log in to Bitbucket, then click on the icon in the top right corner to
 create a new repository called `planets`:
 
-![Creating a Repository on Bitbucket (Step 1)](../fig/bitbucket-create-repo-01.png | width=50)
+<img src="../fig/bitbucket-create-repo-01.png" width="300">
 
 Name your repository "planets" and then click "Create Repository":
 
-![Creating a Repository on Bitbucket (Step 2)](../fig/bitbucket-create-repo-02.png | width=50)
+<img src="../fig/bitbucket-create-repo-02.png" width="500">
 
 As soon as the repository is created, Btibucket displays a page with a URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on Bitbucket (Step 3)](../fig/bitbucket-create-repo-03.png | width=50)
+<img src="../fig/bitbucket-create-repo-03.png" width="700">
 
 This effectively does the following on Bitbucket's servers:
 
@@ -59,7 +59,7 @@ Bitbucket repository a [remote]({{ page.root }}/reference/#remote) for the local
 The home page of the repository on Bitbucket includes the string we need to
 identify it:
 
-![Where to Find Repository URL on Bitbucket](../fig/bitbucket-find-repo-string.png)
+<img src="../fig/bitbucket-find-repo-string.png" width="600">
 
 Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
 SSH to HTTPS.
