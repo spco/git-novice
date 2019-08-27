@@ -1,5 +1,5 @@
 ---
-title: Remotes in GitHub
+title: Remotes in Bitbucket
 teaching: 30
 exercises: 0
 questions:
@@ -26,21 +26,21 @@ services like [GitHub](https://github.com), [BitBucket](https://bitbucket.org) o
 and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
+world.  Log in to Bitbucket, then click on the icon in the top right corner to
 create a new repository called `planets`:
 
-![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
+![Creating a Repository on Bitbucket (Step 1)](../fig/bitbucket-create-repo-01.png)
 
 Name your repository "planets" and then click "Create Repository":
 
-![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
+![Creating a Repository on Bitbucket (Step 2)](../fig/bitbucket-create-repo-02.png)
 
-As soon as the repository is created, GitHub displays a page with a URL and some
+As soon as the repository is created, Btibucket displays a page with a URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
+![Creating a Repository on Bitbucket (Step 3)](../fig/bitbucket-create-repo-03.png)
 
-This effectively does the following on GitHub's servers:
+This effectively does the following on Bitbucket's servers:
 
 ~~~
 $ mkdir planets
@@ -50,16 +50,16 @@ $ git init
 {: .bash}
 
 Our local repository still contains our earlier work on `mars.txt`, but the
-remote repository on GitHub doesn't contain any files yet:
+remote repository on Bitbucket doesn't contain any files yet:
 
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
+![Freshly-Made Bitbucket Repository](../fig/git-freshly-made-github-repo.svg)
 
 The next step is to connect the two repositories.  We do this by making the
-GitHub repository a [remote]({{ page.root }}/reference/#remote) for the local repository.
-The home page of the repository on GitHub includes the string we need to
+Bitbucket repository a [remote]({{ page.root }}/reference/#remote) for the local repository.
+The home page of the repository on Bitbucket includes the string we need to
 identify it:
 
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
+![Where to Find Repository URL on Bitbucket](../fig/bitbucket-find-repo-string.png)
 
 Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
 SSH to HTTPS.
@@ -74,8 +74,6 @@ SSH to HTTPS.
 > and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
 > (this one has a screencast).
 {: .callout}
-
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
 
 Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
@@ -105,7 +103,7 @@ The name `origin` is a local nickname for your remote repository. We could use
 something else if we wanted to, but `origin` is by far the most common choice.
 
 Once the nickname `origin` is set up, this command will push the changes from
-our local repository to the repository on GitHub:
+our local repository to the repository on Bitbucket:
 
 ~~~
 $ git push origin master
@@ -171,7 +169,7 @@ Branch master set up to track remote branch master from origin.
 
 Our local and remote repositories are now in this state:
 
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
+![Bitbucket Repository After First Push](../fig/github-repo-after-first-push.svg)
 
 > ## The '-u' Flag
 >
@@ -198,35 +196,34 @@ Already up-to-date.
 
 Pulling has no effect in this case because the two repositories are already
 synchronized.  If someone else had pushed some changes to the repository on
-GitHub, though, this command would download them to our local repository.
+Bitbucket, though, this command would download them to our local repository.
 
-> ## GitHub GUI
+> ## Bitbucket GUI
 >
-> Browse to your `planets` repository on GitHub.
-> Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
-> Hover over, and click on, the three buttons to the right of each commit.
-> What information can you gather/explore from these buttons?
+> Browse to your `planets` repository on Bitbucket.
+> Under the Source tab, find and click on the text of the commit identifiers for the commits.
+> On the right is a "View source" button, which allows you to browse the repository at the 
+> time of the commit, while at the bottom is a "Files changed" section.
 > How would you get that same information in the shell?
 >
 > > ## Solution
-> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each commit.
+> > The "View source" button lets you view all of the files in the repository at the time of that commit. To do this in the shell, we'd need to checkout the repository at that particular time. We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to look at. If we do this, we need to remember to put the repository back to the right state afterwards!
 > >
-> > When you click on the middle button, you'll see all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
-> >
-> > The right-most button lets you view all of the files in the repository at the time of that commit. To do this in the shell, we'd need to checkout the repository at that particular time. We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to look at. If we do this, we need to remember to put the repository back to the right state afterwards!
+> > The "Files changed" section shows all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
+
 > {: .solution}
 {: .challenge}
 
-> ## GitHub Timestamp
+> ## Bitbucket Timestamp
 >
-> Create a remote repository on GitHub.  Push the contents of your local
+> Create a remote repository on Bitbucket.  Push the contents of your local
 > repository to the remote.  Make changes to your local repository and push
-> these changes.  Go to the repo you just created on GitHub and check the
-> [timestamps]({{ page.root }}/reference/#timestamp) of the files.  How does GitHub record
+> these changes.  Go to the repo you just created on Bitbucket and check the
+> [timestamps]({{ page.root }}/reference/#timestamp) of the files.  How does Bitbucket record
 > times, and why?
 >
 > > ## Solution
-> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
+> > Bitbucket displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
 > {: .solution}
 {: .challenge}
 
@@ -247,7 +244,7 @@ GitHub, though, this command would download them to our local repository.
 > First start by adding a remote with an invalid URL:
 >
 > ~~~
-> git remote add broken https://github.com/this/url/is/invalid
+> git remote add broken https://bitbucket.org/this/url/is/invalid
 > ~~~
 > {: .bash}
 >
@@ -262,10 +259,10 @@ GitHub, though, this command would download them to our local repository.
 > {: .solution}
 {: .challenge}
 
-> ## GitHub License and README files
+> ## Bitbucket License and README files
 >
-> In this section we learned about creating a remote repository on GitHub, but when you initialized your
-> GitHub repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when
+> In this section we learned about creating a remote repository on Bitbucket, but when you initialized your
+> Bitbucket repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when
 > you tried to link your local and remote repositories?
 >
 > > ## Solution
