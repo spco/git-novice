@@ -6,27 +6,27 @@ questions:
 - "How can I use branching to make my workflow more robust?"
 objectives:
 - "Create a new branch in a repository."
-- "Create and merge a Pull Request on GitHub."
+- "Create and merge a Pull Request on Bitbucket."
 keypoints:
 - "`git branch branch-name` creates a new branch based at the current location."
 - "`git push --set-upstream origin branch-name` sets `origin/branch-name` as the upstream branch of `branch-name`."
 ---
 
 For this next step, you will work on your own, but please bear in mind that what is learnt
-can equally be applied to another user's repository e.g. via GitHub. 
+can equally be applied to another user's repository e.g. via Bitbucket. 
 
-The goal of this lesson is to create a new branch for a new feature, and then use GitHub's 
+The goal of this lesson is to create a new branch for a new feature, and then use Bitbucket's 
 interface to merge the changes from that branch into the master.
 
 Conceptually, what we're going to do is this:
 
 ![Diagram of Branch and Merge](../fig/Branching.png)
 
-When it comes to the merge step, we will use GitHub to open a Pull Request. This says
+When it comes to the merge step, we will use Bitbucket to open a Pull Request. This says
 "I've made a branch, now please pull the branch into master (via a merge)". Using a 
 Pull Request allows us (and the owner/other users of the repository) to see the changes 
 that the branch contains. These can be reviewed and altered until satisfactory. Finally,
-the merge can be completed via the GitHub interface.
+the merge can be completed via the Bitbucket interface.
 
 Firstly, ensure you are working on _your_ repository:
 ~~~
@@ -34,7 +34,7 @@ $ cd ~/git-novice/planets
 ~~~
 {: .bash}
 
-Next, ensure that you have the very latest version from GitHub:
+Next, ensure that you have the very latest version from Bitbucket:
 ~~~
 $ git checkout master
 $ git pull origin master
@@ -117,7 +117,7 @@ this example, I've added notes on Jupiter to `jupiter.txt`:
 
 Note that this latest commit is on `new_branch`, but it hasn't affected `master`.
 
-Let's use GitHub's Pull Request mechanism to merge these changes from `new_branch` into `master`.
+Let's use Bitbucket's Pull Request mechanism to merge these changes from `new_branch` into `master`.
 
 ~~~
 $ git push
@@ -131,7 +131,7 @@ To push the current branch and set the remote as upstream, use
 ~~~
 {: .output}
 What's happened here? git doesn't know which branch to push our changes to in the
-GitHub repository (the "upstream branch"). But it suggests what it thinks is most 
+Bitbucket repository (the "upstream branch"). But it suggests what it thinks is most 
 likely, and it's what we want in this case, so we go ahead and follow the advice:
 ~~~
 $ git push --set-upstream origin new_branch
@@ -163,22 +163,23 @@ $ git log --oneline --branches --graph --decorate
 {: .output}
 git is now keeping track of a branch called `origin/new_branch`.
 
-Now switch to the main page of your repo on GitHub. You'll see a yellow banner 
-showing that GitHub has noticed you've added a branch. Click on the "Compare & pull request" button.
+Now switch to the "Pull Requests" tab of your repo on Bitbucket. Click on the "Create pull request" button.
 
-![Compare and Pull Request](../fig/github-add-pull-request.png)
+![Add Pull Request](../fig/bitbucket-add-pull-request.png)
+
+![Create Pull Request](../fig/bitbucket-create-pull-request.png)
 
 This page now shows you the changes in this branch. You can have multiple commits, and multiple 
-edits to multiple files. Note that allong the top you can see (and edit) which branches are to be 
-merged into which others (in our case, `new_branch` is to be merged into `master`).
+edits to multiple files. Note that at the top you can see (and edit) which branch is to be 
+merged into which other (in our case, `new_branch` is to be merged into `master`).
 
 When you're happy with the changes, click "Create pull request".
 
 You're now on a Pull Request page:
 
-![Pull Request](../fig/github-pull-request.png)
+![Pull Request](../fig/bitbucket-pull-request.png)
 
-Take a few minutes to look around. You can add general comments, or you can inspect the individual commits, and add comments to lines in the commits. You can tag other users on GitHub with the `@` symbol, e.g. `@spco`. Explore the contents of the "Conversation / Commits / Checks/ Files Changed" tabs across the top.
+Take a few minutes to look around. You can add general comments, or you can inspect the individual commits, and add comments to lines in the commits. You can tag other users on Bitbucket with the `@` symbol, e.g. `@uizsc1`. Explore the contents of the "Overview / Commits / Activity" tabs across the top.
 
 > ## Add more commits to an open Pull Request
 >
@@ -189,20 +190,20 @@ Take a few minutes to look around. You can add general comments, or you can insp
 
 > ## Review Changes and Merge
 >
-> Note that the "Merge pull request" button has a drop-down menu to the right,
-> which allows you to select 3 different types of merge - "Create a merge commit", 
-> "Squash and merge" or "Rebase and merge". These all have slightly different behaviours
-> and are appropriate in different contexts, but for now "Create a merge commit" 
+> Note that the "Merge strategy" drop-down box has 3 options,
+> which allows you to select different types of merge - "Merge commit", 
+> "Squash" or "Fast forward". These all have slightly different behaviours
+> and are appropriate in different contexts, but for now "Merge commit" 
 > is fine. When you're happy that the contents of the Pull Request are as you want them, 
-> click the "Merge pull request" button, then "Confirm merge".
+> click the "Merge" button.
 >
-> Click on the "code" tab at the top of the page to go back to the main page, and check
+> Click on the "Source" tab to go back to the main page, and check
 > that your changes from that branch have now been correctly merged into `master`.
 >
 > Congratulations! You've merged your first Pull Request!
 {: .challenge}
 
-Finally, once we've mergeed our branch on GitHub, we need to clean up on our local repository.
+Finally, once we've merged our branch on Bitbucket, we need to clean up on our local repository.
 
 ~~~
 $ git checkout master
