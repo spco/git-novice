@@ -33,7 +33,7 @@ our computer, we'll choose "existing directory":
 >
 > Although we're not going to use it here, there should be a "version control"
 > option on this menu. That is what you would click on if you wanted to
-> create a project on your computer by cloning a repository from GitHub.
+> create a project on your computer by cloning a repository from Bitbucket.
 > If that option is not present, it probably means that RStudio doesn't know
 > where your Git executable is. See
 > [this page](https://stat545-ubc.github.io/git03_rstudio-meet-git.html)
@@ -81,7 +81,7 @@ the history:
 > ## Are the Push/Pull Commands Grayed Out?
 >
 > If this is the case, it generally means that RStudio doesn't know the
-> location of any other version of your repository (i.e. the one on GitHub).
+> location of any other version of your repository (i.e. the one on Bitbucket).
 > To fix this, open a terminal to the repository and enter the command:
 > `git push -u origin master`. Then restart RStudio.
 {: .callout}
