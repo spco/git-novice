@@ -21,14 +21,14 @@ play Owner and Collaborator.
 > If you're working through this lesson on your own, you can carry on by opening
 > a second terminal window.
 > This window will represent your partner, working on another computer. You
-> won't need to give anyone access on GitHub, because both 'partners' are you.
+> won't need to give anyone access on Bitbucket, because both 'partners' are you.
 {: .callout}
 
 The Owner needs to give the Collaborator access.
-On GitHub, click the settings button on the right,
+On Bitbucket, click the settings button on the right,
 then select Collaborators, and enter your partner's username.
 
-![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
+![Adding Collaborators on Bitbucket](../fig/bitbucket-add-collaborators.png)
 
 To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
@@ -74,7 +74,7 @@ $ git commit -m "Add notes about Pluto"
 ~~~
 {: .output}
 
-Then push the change to the *Owner's repository* on GitHub:
+Then push the change to the *Owner's repository* on Bitbucket:
 
 ~~~
 $ git push origin master
@@ -96,11 +96,11 @@ Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice earlier when we were setting up remotes by hand.)
 
-Take a look to the Owner's repository on its GitHub website now (maybe you need
+Take a look to the Owner's repository on its Bitbucket website now (maybe you need
 to refresh your browser.) You should be able to see the new commit made by the
 Collaborator.
 
-To download the Collaborator's changes from GitHub, the Owner now enters:
+To download the Collaborator's changes from Bitbucket, the Owner now enters:
 
 ~~~
 $ git pull origin master
@@ -123,7 +123,7 @@ Fast-forward
 {: .output}
 
 Now the three repositories (Owner's local, Collaborator's local, and Owner's on
-GitHub) are back in sync.
+Bitbucket) are back in sync.
 
 > ## A Basic Collaborative Workflow
 >
@@ -134,7 +134,7 @@ GitHub) are back in sync.
 > * update your local repo with `git pull origin master`,
 > * make your changes and stage them with `git add`,
 > * commit your changes with `git commit -m`, and
-> * upload the changes to GitHub with `git push origin master`
+> * upload the changes to Bitbucket with `git push origin master`
 >
 > It is better to make many commits with smaller changes rather than
 > of one commit with massive changes: small commits are easier to
@@ -150,7 +150,7 @@ GitHub) are back in sync.
 >
 > The Owner pushed commits to the repository without giving any information
 > to the Collaborator. How can the Collaborator find out what has changed with
-> command line? And on GitHub?
+> command line? And on Bitbucket?
 >
 > > ## Solution
 > > On the command line, the Collaborator can use ```git fetch origin master```
@@ -158,7 +158,7 @@ GitHub) are back in sync.
 > > them. Then by running ```git diff master origin/master``` the Collaborator
 > > will see the changes output in the terminal.
 > >
-> > On GitHub, the Collaborator can go to their own fork of the repository and
+> > On Bitbucket, the Collaborator can go to their own fork of the repository and
 > > look right above the light blue latest commit bar for a gray bar saying
 > > "This branch is 1 commit behind Our-Repository:master." On the far right of
 > > that gray bar is a Compare icon and link. On the Compare page the
@@ -169,20 +169,20 @@ GitHub) are back in sync.
 > {: .solution}
 {: .challenge}
 
-> ## Comment Changes in GitHub
+> ## Comment Changes in Bitbucket
 >
 > The Collaborator has some questions about one line change made by the Owner and
 > has some suggestions to propose.
 >
-> With GitHub, it is possible to comment the diff of a commit. Over the line of
-> code to comment, a blue comment icon appears to open a comment window.
+> With Bitbucket, it is possible to comment the diff of a commit. To the left the line of
+> code to comment, a blue comment icon (a plus within a speech bubble) appears to open a comment window.
 >
-> The Collaborator posts its comments and suggestions using GitHub interface.
+> The Collaborator posts its comments and suggestions using Bitbucket interface.
 {: .challenge}
 
 > ## Version History, Backup, and Version Control
 >
 > Some backup software can keep a history of the versions of your files. They also
 > allows you to recover specific versions. How is this functionality different from version control?
-> What are some of the benefits of using version control, Git and GitHub?
+> What are some of the benefits of using version control, Git and Bitbucket?
 {: .challenge}
