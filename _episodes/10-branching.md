@@ -143,7 +143,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To github.com:spco/planets.git
+To https://vlad@bitbucket.org/vlad/planets.git
  * [new branch]      new_branch -> new_branch
 Branch new_branch set up to track remote branch new_branch from origin.
 ~~~
@@ -222,7 +222,7 @@ $ git pull origin master
 remote: Counting objects: 1, done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (1/1), done.
-From github.com:spco/planets
+From https://vlad@bitbucket.org/vlad/planets
  * branch            master     -> FETCH_HEAD
    83f3f03..b97bc42  master     -> origin/master
 Updating 83f3f03..b97bc42
