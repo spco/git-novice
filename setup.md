@@ -11,7 +11,6 @@ We'll do our work in the `git-novice` folder so make sure you change your workin
 
 ~~~
 $ cd ~
-$ module load git
 $ mkdir git-novice
 $ cd git-novice
 ~~~
