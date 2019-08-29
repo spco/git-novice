@@ -131,15 +131,6 @@ $ cd git-novice
     <a href="https://help.github.com/articles/supported-browsers/">supported
     web browser</a>.
   </p>
-  <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-      for keeping your email address private</a> provided at GitHub.
-  </p>
 
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
