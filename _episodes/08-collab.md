@@ -31,7 +31,7 @@ then select Collaborators, and enter your partner's username.
 ![Adding Collaborators on Bitbucket](../fig/bitbucket-add-collaborators.png)
 
 To accept access to the Owner's repo, the Collaborator
-needs to go to [https://github.com/notifications](https://github.com/notifications).
+needs to go to their email and click the link in the invitation email.
 Once there she can accept access to the Owner's repo.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
